@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+:root {
+    --azul: #213ed0;
+    --blanco: #ffffff;
+    --dorado: #d39e52;
+    --negro: #222;
+}
+.body-con-fondo {
+    background-image: url("assets/background.png");
+    position: absolute;
+}
+.body-sin-fondo {
+    background-image: url("assets/game-background.png");
+    position: absolute;
+}
+body{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+	overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+.cartapartida {
+    text-align: center;
+    margin-left: 250px;
+    margin-bottom: 50px;
+}
+.cartapartida p{
+    text-align: start;
+    margin: 0;
+}
+.renglon1{
+    display: flex;
+}
+.equipo{
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    color: var(--blanco);
+    text-transform: uppercase;
+    line-height: 50px;
+}
+.vs{
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    color: var(--dorado);
+    padding-left: 20px;
+    text-transform: uppercase;
+    line-height: 50px;
+}
+.horario{
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 30px;
+    line-height: 25px;
+    font-weight: 700;
+    padding-left: 2px;
+    color: var(--dorado);
+    text-transform: uppercase;
+}
+#text-roller{
+    height: 35px;
+    position: fixed;
+    font-family: "Afacad Flux", sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 35px;
+    font-weight: 600;
+    margin-top: 30px;
+    color: var(--negro);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100vw;
+    left: 0px;
+    bottom: 0;
+    background-color: var(--dorado);
+}
+.logo{
+    position: absolute;
+    right: 250;
+    height: 30%;
+}
+.overlay-superior{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 62px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+.sector{
+    display: flex;
+    font-family: "Afacad Flux", sans-serif;
+    text-transform: uppercase;
+    
+}
+.caja-equipo{
+    background-color: var(--azul);
+    width: 450px;
+    color: var(--blanco);
+    font-weight: 700;
+}
+.caja-score-izq{
+    background-color: var(--blanco);
+    color: var(--negro);
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skew(20deg);
+    margin-left: -11px;
+    font-size: 35px;
+    font-weight: 800;
+
+}
+.caja-score-der{
+    background-color: var(--blanco);
+    color: var(--negro);
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skew(-20deg);
+    margin-right: -26px;
+    font-size: 35px;
+    font-weight: 800;
+}
+.equipo-ingame-izq{
+    margin: 0;
+    padding-left: 30px;
+    height: 61px;
+    font-size: 22;
+    display: flex;
+    align-items: center;
+}
+.equipo-ingame-der{
+    margin: 0;
+    padding-right: 30px;
+    height: 61px;
+    font-size: 22;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.overlay{
+    width: 100vw;
+    height: 100vh;
+}
+.overlay-inferior{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.ingame-logo{
+    position: absolute;
+    height: 150px;
+    bottom: 40px;
+    right: 330px;
+}
+.titulo{
+    margin-left: 250px;
+    font-family: "Afacad Flux", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 12px;
+    color: var(--blanco);
+}
+.tabla {
+    margin-left: 250px;
+    width: 700px;
+    font-family: "Afacad Flux", sans-serif;
+    text-transform: uppercase;
+}
+.renglon-posicion{
+    display: flex;
+    background-color: var(--blanco);
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    height: 60px;
+}
+
+.renglon-posicion p{
+    display: flex;
+}
+.tabla-equipo{
+    padding-left: 30px;
+    font-family: "Afacad Flux", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 30px;
+    color: var(--dorado);
+}
+.tabla-puntos{
+    padding-right: 30px;
+    font-family: "Afacad Flux", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 10px;
+    font-size: 25px;
+    color: var(--negro);
+}

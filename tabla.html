@@ -1,0 +1,96 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css.css">
+        <title>Partidas</title>
+        <script src="index.js"></script>
+        <script>
+            async function cargarVariablesTabla() {
+            const response = await fetch('configuracion/config.cfg');
+            const text = await response.text();
+            const variables = {};
+            text.split('\n').forEach(line => {
+                const [key, value] = line.split('=');
+                variables[key] = value;
+            });
+            document.getElementById('pos1').innerText = variables['pos1'];
+            document.getElementById('pos2').innerText = variables['pos2'];
+            document.getElementById('pos3').innerText = variables['pos3'];
+            document.getElementById('pos4').innerText = variables['pos4'];
+            document.getElementById('pos5').innerText = variables['pos5'];
+            document.getElementById('pos6').innerText = variables['pos6'];
+            document.getElementById('pos7').innerText = variables['pos7'];
+            document.getElementById('pos8').innerText = variables['pos8'];
+            document.getElementById('pos9').innerText = variables['pos9'];
+
+            document.getElementById('v1').innerText = variables['v1'];
+            document.getElementById('v2').innerText = variables['v2'];
+            document.getElementById('v3').innerText = variables['v3'];
+            document.getElementById('v4').innerText = variables['v4'];
+            document.getElementById('v5').innerText = variables['v5'];
+            document.getElementById('v6').innerText = variables['v6'];
+            document.getElementById('v7').innerText = variables['v7'];
+            document.getElementById('v8').innerText = variables['v8'];
+            document.getElementById('v9').innerText = variables['v9'];
+
+            document.getElementById('d1').innerText = variables['d1'];
+            document.getElementById('d2').innerText = variables['d2'];
+            document.getElementById('d3').innerText = variables['d3'];
+            document.getElementById('d4').innerText = variables['d4'];
+            document.getElementById('d5').innerText = variables['d5'];
+            document.getElementById('d6').innerText = variables['d6'];
+            document.getElementById('d7').innerText = variables['d7'];
+            document.getElementById('d8').innerText = variables['d8'];
+            document.getElementById('d9').innerText = variables['d9'];
+            
+            }
+            window.onload = cargarVariablesTabla;
+        </script>
+    </head>
+    <body class="body-con-fondo">
+        <p class="titulo">tabla de posiciones</p>
+        <div class="tabla">
+            <div class="renglon-posicion">
+                <p class="tabla-equipo"><span id="pos1"></span></p>
+                <p class="tabla-puntos"><span id="v1"></span> - <span id="d1"></span></p>
+            </div>
+            <div class="renglon-posicion">
+                <p class="tabla-equipo"><span id="pos2"></span></p>
+                <p class="tabla-puntos"><span id="v2"></span> - <span id="d2"></span></p>
+            </div>
+            <div class="renglon-posicion">
+                <p class="tabla-equipo"><span id="pos3"></span></p>
+                <p class="tabla-puntos"><span id="v3"></span> - <span id="d3"></span></p>
+            </div>
+            <div class="renglon-posicion">
+                <p class="tabla-equipo"><span id="pos4"></span></p>
+                <p class="tabla-puntos"><span id="v4"></span> - <span id="d4"></span></p>
+            </div>
+            <div class="renglon-posicion">
+                <p class="tabla-equipo"><span id="pos5"></span></p>
+                <p class="tabla-puntos"><span id="v5"></span> - <span id="d5"></span></p>
+            </div>
+            <div class="renglon-posicion">
+                <p class="tabla-equipo"><span id="pos6"></span></p>
+                <p class="tabla-puntos"><span id="v6"></span> - <span id="d6"></span></p>
+            </div>
+            <div class="renglon-posicion">
+                <p class="tabla-equipo"><span id="pos7"></span></p>
+                <p class="tabla-puntos"><span id="v7"></span> - <span id="d7"></span></p>
+            </div>
+            <div class="renglon-posicion">
+                <p class="tabla-equipo"><span id="pos8"></span></p>
+                <p class="tabla-puntos"><span id="v8"></span> - <span id="d8"></span></p>
+            </div>
+            <div class="renglon-posicion">
+                <p class="tabla-equipo"><span id="pos9"></span></p>
+                <p class="tabla-puntos"><span id="v9"></span> - <span id="d9"></span></p>
+            </div>
+        </div>
+        <div id="text-roller">
+            <span id="textroller">¡No te pierdas ni un segundo de la acción! Siguenos en Instagram para las últimas novedades, actualizaciones de torneos y momentos épicos de League of Legends. Únete a la comunidad y mantente al día con todo lo que ocurre en el mundo de LoL.</span>
+        </div>
+        <img src="assets/logo.png" alt="" class="logo">
+    </body>
+</html>

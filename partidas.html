@@ -1,0 +1,76 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css.css">
+        <title>Posiciones</title>
+        <script src="index.js"></script>
+        <script>
+            async function cargarVariablesPartidas() {
+            const response = await fetch('configuracion/config.cfg');
+            const text = await response.text();
+            const variables = {};
+            text.split('\n').forEach(line => {
+                const [key, value] = line.split('=');
+                variables[key] = value;
+            });
+            document.getElementById('equipo1').innerText = variables['equipo1'];
+            document.getElementById('equipo2').innerText = variables['equipo2'];
+            document.getElementById('horario1').innerText = variables['horario1'];
+            document.getElementById('equipo3').innerText = variables['equipo3'];
+            document.getElementById('equipo4').innerText = variables['equipo4'];
+            document.getElementById('horario2').innerText = variables['horario2'];
+            document.getElementById('equipo5').innerText = variables['equipo5'];
+            document.getElementById('equipo6').innerText = variables['equipo6'];
+            document.getElementById('horario3').innerText = variables['horario3'];
+            document.getElementById('equipo7').innerText = variables['equipo7'];
+            document.getElementById('equipo8').innerText = variables['equipo8'];
+            document.getElementById('horario4').innerText = variables['horario4'];
+            }
+            window.onload = cargarVariablesPartidas;
+        </script>
+    </head>
+    <body class="body-con-fondo">
+        <div class="cartapartida">
+            <div class="renglon1">
+                <p class="equipo"><span id="equipo1"></span></p>
+                <p class="vs">VS</p>
+            </div>
+            <p class="equipo"><span id="equipo2"></span></p>
+            <p class="horario"><span id="horario1"></span></p>
+        </div>
+
+        <div class="cartapartida">
+            <div class="renglon1">
+                <p class="equipo"><span id="equipo3"></span></p>
+                <p class="vs">VS</p>
+            </div>
+            <p class="equipo"><span id="equipo4"></span></p>
+            <p class="horario"><span id="horario2"></span></p>
+        </div>
+
+        <div class="cartapartida">
+            <div class="renglon1">
+                <p class="equipo"><span id="equipo5"></span></p>
+                <p class="vs">VS</p>
+            </div>
+            <p class="equipo"><span id="equipo6"></span></p>
+            <p class="horario"><span id="horario3"></span></p>
+        </div>
+
+        <div class="cartapartida">
+            <div class="renglon1">
+                <p class="equipo"><span id="equipo7"></span></p>
+                <p class="vs">VS</p>
+            </div>
+            <p class="equipo"><span id="equipo8"></span></p>
+            <p class="horario"><span id="horario4"></span></p>
+        </div>
+
+        <div id="text-roller">
+            <span id="textroller">¡No te pierdas ni un segundo de la acción! Siguenos en Instagram para las últimas novedades, actualizaciones de torneos y momentos épicos de League of Legends. Únete a la comunidad y mantente al día con todo lo que ocurre en el mundo de LoL.</span>
+        </div>
+        <img src="assets/logo.png" alt="" class="logo">
+    
+    </body>
+</html>

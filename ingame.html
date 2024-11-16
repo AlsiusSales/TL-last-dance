@@ -1,0 +1,52 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css.css">
+        <title>Ingame</title>
+        <script src="index.js"></script>
+        <script>
+            async function cargarVariablesIngame() {
+            const response = await fetch('configuracion/config.cfg');
+            const text = await response.text();
+            const variables = {};
+            text.split('\n').forEach(line => {
+                const [key, value] = line.split('=');
+                variables[key] = value;
+            });
+            document.getElementById('equipoizq').innerText = variables['equipoizq'];
+            document.getElementById('equipoder').innerText = variables['equipoder'];
+            document.getElementById('scoreizq').innerText = variables['scoreizq'];
+            document.getElementById('scoreder').innerText = variables['scoreder'];
+            }
+            window.onload = cargarVariablesIngame;
+        </script>
+    </head>
+    <body class="body-sin-fondo">
+        <div class="overlay">
+            <div class="overlay-superior">
+                <div class="sector">
+                    <div class="caja-equipo">
+                        <p class="equipo-ingame-izq"><span id="equipoizq"></span></p>
+                    </div>
+                    <div class="caja-score-izq">
+                        <p class="score"><span id="scoreizq"></span></p>
+                    </div>
+                </div>
+                <div class="sector">
+                    <div class="caja-score-der">
+                        <p class="score"><span id="scoreder"></span></p>
+                    </div>
+                    <div class="caja-equipo">
+                        <p class="equipo-ingame-der"><span id="equipoder"></span></p>
+                    </div>
+                </div>
+            </div>
+            <img class="overlay-inferior" src="assets/overlay-inferior.png" alt="">
+        </div>
+        <div id="text-roller" style="margin-bottom: 233px;">
+            <span id="textroller">¡No te pierdas ni un segundo de la acción! Siguenos en Instagram para las últimas novedades, actualizaciones de torneos y momentos épicos de League of Legends. Únete a la comunidad y mantente al día con todo lo que ocurre en el mundo de LoL.</span>
+        </div>
+        <img src="assets/logo.png" alt="" class="ingame-logo">
+    </body>
+</html>
