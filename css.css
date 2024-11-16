@@ -9,9 +9,7 @@
     background-image: url("assets/background.png");
     position: absolute;
 }
-.body-con-fondo img{
-    margin-left: 250px;
-}
+
 .body-sin-fondo {
     background-image: url("");
     position: absolute;
@@ -174,6 +172,17 @@ body{
     line-height: 12px;
     color: var(--blanco);
 }
+.titulo-grande{
+    margin-left: 150px;
+    font-family: "Afacad Flux", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 102px;
+    line-height: 102px;
+    color: var(--blanco);
+    margin-top: 0;
+    margin-bottom: 0;
+}
 .tabla {
     margin-left: 250px;
     width: 700px;
@@ -188,7 +197,6 @@ body{
     margin-bottom: 10px;
     height: 60px;
 }
-
 .renglon-posicion p{
     display: flex;
 }
