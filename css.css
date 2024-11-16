@@ -9,6 +9,9 @@
     background-image: url("assets/background.png");
     position: absolute;
 }
+.body-con-fondo img{
+    margin-left: 250px;
+}
 .body-sin-fondo {
     background-image: url("assets/game-background.png");
     position: absolute;
